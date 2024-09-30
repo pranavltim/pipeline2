@@ -29,6 +29,7 @@ jobs:
           docker tag pranavps:latest 405894846724.dkr.ecr.ap-south-1.amazonaws.com/pranavps:latest
           docker push 405894846724.dkr.ecr.ap-south-1.amazonaws.com/pranavps:latest
 
+
       - name: Deploy to EKS
         run: |
           kubectl apply -f k8s/deployment.yaml
