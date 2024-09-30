@@ -26,8 +26,8 @@ jobs:
       - name: Build, tag, and push Docker image
         run: |
           docker build -t pranavps .
-          docker tag pranavps:latest 405894846724.dkr.ecr.ap-south-1.amazonaws.com/pranavps:latest
-          docker push 405894846724.dkr.ecr.ap-south-1.amazonaws.com/pranavps:latest
+          docker tag pranavps:latest 405894846724.dkr.${{ secrets.AWS_REGION }}.amazonaws.com/pranavps:latest
+          docker push 405894846724.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/pranavps:latest
 
 
       - name: Deploy to EKS
